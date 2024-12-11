@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaotic Hello World</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+            position: relative;
+            font-family: Arial, sans-serif;
+        }
+
+        .word {
+            position: absolute;
+            font-size: calc(10px + 2vmin);
+            font-weight: bold;
+            color: #000;
+            transform: translate(-50%, -50%) rotate(calc(360deg * var(--angle)));
+        }
+
+        .highlight {
+            color: red;
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.3;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    const words = ["Hello", "World"];
+    const wordCount = 50; // Number of words to display
+
+    for (let i = 0; i < wordCount; i++) {
+        const wordElement = document.createElement('div');
+        wordElement.textContent = words[Math.floor(Math.random() * words.length)];
+        wordElement.classList.add('word');
+
+        // Random positions
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+
+        // Random rotation
+        const angle = Math.random();
+        wordElement.style.setProperty('--angle', angle);
+
+        // Apply position
+        wordElement.style.left = `${x}px`;
+        wordElement.style.top = `${y}px`;
+
+        // Occasionally highlight words
+        if (Math.random() > 0.8) {
+            wordElement.classList.add('highlight');
+        }
+
+        document.body.appendChild(wordElement);
+    }
+</script>
+
+</body>
+</html>
