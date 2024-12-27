@@ -36,7 +36,6 @@ xandr.com, 14082, RESELLER
 yieldmo.com, 3591550211052216798, RESELLER, 6a92c77cfc3d2258
 zmaticoo.com, 5135655, RESELLER
 google.com, pub-2937038436554404, DIRECT, f08c47fec0942fa0
-Maksim Android Zakharenka, [27.12.2024 13:53]
 lijit.com, 481366, RESELLER, fafdf38b16bf6b2b
 lijit.com, 503707, RESELLER, fafdf38b16bf6b2b
 lijit.com, 483304, RESELLER, fafdf38b16bf6b2b
